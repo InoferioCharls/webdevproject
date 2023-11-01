@@ -1,9 +1,9 @@
 <?php 
     include_once("../dbConnection/mysqlconfig_connection.php");
     if(isset($_POST["update"])){
-        $id = $_POST["id"];
-        $code = $_POST["code"];
-        $name = $_POST["name"];
+        $id = $_POST['id'];
+        $code = $_POST['code'];
+        $name = $_POST['name'];
 
         if(empty($code)||empty($name)){
             if(empty($code)){
