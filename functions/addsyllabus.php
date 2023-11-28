@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Data</title>
+    <title>Add Syllabus Data</title>
 </head>
 
 <body>
@@ -12,8 +12,8 @@
     include_once("../dbConnection/mysqlconfig_connection.php");
 
     if (isset($_POST['submit'])) {
-        $code = $_POST['syllabus_code'];
-        $author = $_POST['syllabus_author'];
+        $code = $_POST['code'];
+        $author = $_POST['author'];
         $subject = $_POST['subject'];
 
         if (empty($code) || empty($author)) {
