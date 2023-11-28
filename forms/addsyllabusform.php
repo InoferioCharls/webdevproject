@@ -27,7 +27,8 @@
                     <select name="subject"> <!-- HTML INPUT for Drop Down Type menu -->
                         <?php
                         include_once("../dbconnection/mysqlconfig_connection.php"); //include code to connect to connect to database
-                        $query = mysqli_query($dbc, $query);
+                        $query = "SELECT * FROM tblsubjects";
+                        $result = mysqli_query($dbc, $query);
                         while ($res = mysqli_fetch_array($result)) { //loop to display all subject as options in the drop-down menu
                             echo "<option value=\"" . $res['Subject_ID'] . "\">"; //Note that the value attribute contains the ID of the subject
                             echo $res['Subject_Name']; //display the actual subject's name in the drop-down option
