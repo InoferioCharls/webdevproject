@@ -12,7 +12,7 @@
     include_once("../dbConnection/mysqlconfig_connection.php");
 
     if (isset($_POST['submit'])) {
-        $code = $_POST['code'];
+        $code = $_POST['syllabus_code'];
         $author = $_POST['syllabus_author'];
         $subject = $_POST['subject'];
 
