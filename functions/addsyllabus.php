@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Data</title>
+</head>
+
+<body>
+    <?php
+    include_once("../dbConnection/mysqlconfig_connection.php");
+
+    if (isset($_POST['submit'])) {
+        $scode = $_POST['syllabus_code'];
+        $sauthor = $_POST['syllabus_author'];
+
+        if (empty($scode) || empty($sauthor)) {
+            if (empty($scode)) {
+                echo "<font color = 'red'> object code field is empty.</font<br>";
+            }
+
+            if (empty($sauthor)) {
+                echo "<font color = 'red'> object name field is empty.</font<br>";
+            }
+            echo "<br><a href='javascript:self.history.back();'>Go Back</a>";
+        } else {
+            $result = mysqli_query($dbc, "INSERT INTO tblsyllabus(syllabus_code, syllabus_author) VALUES('$scode', '$sauthor')");
+
+            echo "<font color='green'> Data added successfully.";
+            echo "<br><a href='../index.php'>View Result</a>";
+        }
+    }
+
+    ?>
+
+</body>
+
+</html>
