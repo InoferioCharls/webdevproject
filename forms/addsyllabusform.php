@@ -15,11 +15,11 @@
         <table width="25%">
             <tr>
                 <td>Syllabus Code</td>
-                <td><input type="text" name="scode"></td>
+                <td><input type="text" name="code"></td>
             </tr>
             <tr>
                 <td>Syllabus Author</td>
-                <td><input type="text" name="sauthor"></td>
+                <td><input type="text" name="author"></td>
             </tr>
             <tr>
                 <td>Subject</td>
@@ -40,7 +40,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td><input type="submit"  name="Submit" value="ADD"></td>
+                <td><input type="submit"  name="submit" value="Add"></td>
             </tr>
         </table>
     </form>
